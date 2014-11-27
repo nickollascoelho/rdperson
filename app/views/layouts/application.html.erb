@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RDPerson</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container">
+	    <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to 'RDPerson', root_url, :class => "navbar-brand" %>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Home', root_url %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">People <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><%= link_to 'New', new_person_path %></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<div class="row clearfix">
+			 <div class="col-xs-12 col-sm-12 col-md-12 column">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
