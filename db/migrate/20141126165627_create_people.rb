@@ -8,10 +8,12 @@ class CreatePeople < ActiveRecord::Migration
       t.string :job_title
       t.string :phone
       t.string :website
-      t.string :url
+      t.string :host
       t.string :username
       t.string :password
-
+      t.string :security_token
+      t.string :client_id
+      t.string :client_secret
       t.timestamps
     end
   end

@@ -10,11 +10,18 @@
       </ul>
     </div>
   <% end %>
-      <div class="form-group">
-        <div class="col-md-6"><%= f.text_field :url, :placeholder => "url", class: "form-control" %></div>
-        <div class="col-md-3"><%= f.text_field :username, :placeholder => "username", class: "form-control"  %></div>
-        <div class="col-md-3"><%= f.password_field :password, :placeholder => "password", class: "form-control"  %></div>
-      </div>
+      <fieldset>
+        <div class="form-group">
+          <div class="col-md-6"><%= f.text_field :host, :placeholder => "login.salesforce.com", class: "form-control" %></div>
+          <div class="col-md-3"><%= f.text_field :username, :placeholder => "username", class: "form-control"  %></div>
+          <div class="col-md-3"><%= f.password_field :password, :placeholder => "password", class: "form-control"  %></div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6"><%= f.text_field :client_id, :placeholder => "client id", class: "form-control" %></div>
+          <div class="col-md-3"><%= f.password_field :security_token, :placeholder => "security token", class: "form-control" %></div>
+          <div class="col-md-3"><%= f.password_field :client_secret, :placeholder => "client secret", class: "form-control"  %></div>
+        </div>
+      </fieldset>
     <hr>
     <div class="form-group">
       <div class="col-md-6">

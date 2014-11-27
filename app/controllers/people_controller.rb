@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-
+  require 'uri'
   # GET /people
   # GET /people.json
   def index
@@ -25,8 +25,7 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(person_params)
-    pass = @person.password
-    @person.password = nil
+    @person.host = URI.split(@person.host)[2]
     respond_to do |format|
       if @person.save
         @person.password = pass
@@ -71,6 +70,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :last_name, :email, :company, :job_title, :phone, :website, :url, :username, :password)
+      params.require(:person).permit(:name, :last_name, :email, :company, :job_title, :phone, :website, :url, :username, :password, :security_token, :client_id, :client_secret)
     end
 end

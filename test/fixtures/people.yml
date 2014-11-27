@@ -11,6 +11,9 @@ one:
   url: MyString
   username: MyString
   password: MyString
+  security_token: MyString
+  client_id: MyString
+  client_secret: MyString
 
 two:
   name: MyString
@@ -23,3 +26,6 @@ two:
   url: MyString
   username: MyString
   password: MyString
+  security_token: MyString
+  client_id: MyString
+  client_secret: MyString
