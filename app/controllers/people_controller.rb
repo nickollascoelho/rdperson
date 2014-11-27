@@ -25,8 +25,11 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(person_params)
+    pass = @person.password
+    @person.password = nil
     respond_to do |format|
       if @person.save
+        @person.password = pass
         Resque.enqueue(Salesforce, @person)
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
       else

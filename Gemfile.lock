@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/nickollascoelho/rdsalesforce.git
-  revision: 1743399d1e026f314dc1d4bab486e62d1cdb6e31
+  revision: 2dbfd27e996a495383adf2216edd4acccd763981
   specs:
-    rdsalesforce (0.0.1)
+    rdsalesforce (0.0.6)
       restforce
 
 GEM
@@ -169,7 +169,7 @@ DEPENDENCIES
   pg
   rails (= 4.1.4)
   rails_12factor
-  rdsalesforce!
+  rdsalesforce (~> 0.0.6)!
   resque
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
