@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
@@ -44,3 +43,7 @@ gem 'autoprefixer-rails'
 gem 'rdsalesforce', :git => 'git://github.com/nickollascoelho/rdsalesforce.git'
 
 gem 'resque'
+
+gem 'rails_12factor', group: :production
+
+ruby "2.1.4"
