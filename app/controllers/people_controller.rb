@@ -25,10 +25,8 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(person_params)
-    @person.host = URI.split(@person.host)[2]
     respond_to do |format|
       if @person.save
-        @person.password = pass
         Resque.enqueue(Salesforce, @person)
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
       else
@@ -70,6 +68,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :last_name, :email, :company, :job_title, :phone, :website, :url, :username, :password, :security_token, :client_id, :client_secret)
+      params.require(:person).permit(:name, :last_name, :email, :company, :job_title, :phone, :website, :host, :username, :password, :security_token, :client_id, :client_secret)
     end
 end

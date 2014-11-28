@@ -40,7 +40,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 
-gem 'rdsalesforce', '~> 0.0.6', :git => 'git://github.com/nickollascoelho/rdsalesforce.git'
+gem 'rdsalesforce', '~> 0.1.0', :git => 'git://github.com/nickollascoelho/rdsalesforce.git'
 
 gem 'resque'
 
@@ -48,4 +48,4 @@ gem 'rails_12factor', group: :production
 
 gem 'unicorn'
 
-ruby "2.1.5"
+ruby "2.1.4"
